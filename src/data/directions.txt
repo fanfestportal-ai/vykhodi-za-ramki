@@ -1,0 +1,32 @@
+export const CATEGORIES = {
+  dance: { id: 'dance', label: 'Танцевальные' },
+  gymnastics: { id: 'gymnastics', label: 'Гимнастика и тело' },
+  aerial: { id: 'aerial', label: 'Воздушные' },
+  pole: { id: 'pole', label: 'Пилон и сила' },
+  calm: { id: 'calm', label: 'Спокойные практики' },
+  kids: { id: 'kids', label: 'Детские' },
+};
+
+export const STATUS = {
+  active: { id: 'active', label: 'Действует', tone: 'success' },
+  upcoming: { id: 'upcoming', label: 'Скоро открытие', tone: 'warning' },
+  planned: { id: 'planned', label: 'Планируется', tone: 'muted' },
+};
+
+export const LEVELS = { any: 'Любой уровень', beginner: 'Новичок', intermediate: 'Средний', advanced: 'Продвинутый' };
+
+export const directions = [
+  { id: 'contemporary', title: 'Contemporary', categoryId: 'dance', status: 'active', level: 'any', age: '14+', duration: '60 мин', shortDescription: 'Свобода движения, пластика и работа с эмоциями через танец.', fullDescription: 'Contemporary — это язык тела.', image: 'https://images.unsplash.com/photo-1518834107812-67b0b7c58434?w=800&q=80', featured: true },
+  { id: 'jazz-dance', title: 'Jazz Dance', categoryId: 'dance', status: 'active', level: 'any', age: '12+', duration: '60 мин', shortDescription: 'Энергия, ритм и характер в каждом движении.', fullDescription: 'Jazz Dance сочетает технику и артистизм.', image: 'https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=800&q=80', featured: true },
+  { id: 'high-heels', title: 'High Heels', categoryId: 'dance', status: 'active', level: 'beginner', age: '16+', duration: '60 мин', shortDescription: 'Пластика, уверенность и работа на каблуках.', fullDescription: 'High Heels — это про женственность и осанку.', image: 'https://images.unsplash.com/photo-1519982511026-180626190626?w=800&q=80', featured: true },
+  { id: 'stretching', title: 'Растяжка', categoryId: 'gymnastics', status: 'active', level: 'any', age: '14+', duration: '60 мин', shortDescription: 'Гибкость, подвижность и лёгкость в теле.', fullDescription: 'Безопасная работа над гибкостью.', image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80', featured: true },
+  { id: 'pilates', title: 'Пилатес', categoryId: 'gymnastics', status: 'active', level: 'any', age: '16+', duration: '60 мин', shortDescription: 'Сильный центр, осанка и контроль тела.', fullDescription: 'Пилатес — это про глубокие мышцы.', image: 'https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=800&q=80', featured: true },
+  { id: 'pole-dance', title: 'Pole Dance', categoryId: 'pole', status: 'active', level: 'any', age: '16+', duration: '60 мин', shortDescription: 'Сила, пластика и работа на пилоне.', fullDescription: 'Pole Dance — сочетание силовой подготовки и танца.', image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80', featured: true },
+  { id: 'yoga', title: 'Йога', categoryId: 'calm', status: 'active', level: 'any', age: '14+', duration: '75 мин', shortDescription: 'Баланс тела и спокойствие ума.', fullDescription: 'Практика, возвращающая внимание к дыханию.', image: 'https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800&q=80', featured: false },
+  { id: 'kids-gymnastics', title: 'Детская гимнастика', categoryId: 'kids', status: 'active', level: 'beginner', age: '4–10', duration: '45 мин', shortDescription: 'Гибкость, координация и игра.', fullDescription: 'Занятия для детей в игровой форме.', image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80', featured: false },
+];
+
+export const getDirectionsByCategory = (categoryId) => directions.filter((d) => d.categoryId === categoryId);
+export const getFeaturedDirections = () => directions.filter((d) => d.featured);
+export const getCategoryById = (id) => CATEGORIES[id];
+export const getStatusById = (id) => STATUS[id];

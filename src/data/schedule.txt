@@ -1,0 +1,17 @@
+export const DAYS = [
+  { id: 1, short: 'Пн', full: 'Понедельник' }, { id: 2, short: 'Вт', full: 'Вторник' }, { id: 3, short: 'Ср', full: 'Среда' },
+  { id: 4, short: 'Чт', full: 'Четверг' }, { id: 5, short: 'Пт', full: 'Пятница' }, { id: 6, short: 'Сб', full: 'Суббота' }, { id: 7, short: 'Вс', full: 'Воскресенье' },
+];
+
+export const DEMO_SCHEDULE = [
+  { id: 's1', dayId: 1, time: '10:00', duration: 60, directionId: 'stretching', teacherId: 't2', spots: 8, status: 'open' },
+  { id: 's2', dayId: 1, time: '18:00', duration: 60, directionId: 'contemporary', teacherId: 't1', spots: 5, status: 'open' },
+  { id: 's3', dayId: 2, time: '11:00', duration: 60, directionId: 'pilates', teacherId: 't3', spots: 10, status: 'open' },
+  { id: 's4', dayId: 2, time: '19:00', duration: 60, directionId: 'pole-dance', teacherId: 't4', spots: 6, status: 'open' },
+  { id: 's5', dayId: 3, time: '10:00', duration: 75, directionId: 'yoga', teacherId: 't3', spots: 12, status: 'open' },
+  { id: 's6', dayId: 4, time: '18:30', duration: 60, directionId: 'jazz-dance', teacherId: 't4', spots: 4, status: 'open' },
+  { id: 's7', dayId: 5, time: '18:00', duration: 60, directionId: 'high-heels', teacherId: 't4', spots: 9, status: 'open' },
+  { id: 's8', dayId: 6, time: '11:00', duration: 45, directionId: 'kids-gymnastics', teacherId: 't2', spots: 6, status: 'open' },
+];
+
+export const getScheduleByDay = (dayId) => DEMO_SCHEDULE.filter((s) => s.dayId === dayId).sort((a, b) => a.time.localeCompare(b.time));

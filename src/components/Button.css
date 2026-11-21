@@ -1,0 +1,13 @@
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; font-family: var(--font-body); font-weight: 500; border-radius: 999px; border: 1px solid transparent; cursor: pointer; transition: all var(--duration-normal) var(--ease-smooth); white-space: nowrap; text-decoration: none; }
+.btn--sm { padding: 0.65rem 1.3rem; font-size: 0.85rem; }
+.btn--md { padding: 0.9rem 1.8rem; font-size: 0.95rem; }
+.btn--lg { padding: 1.1rem 2.2rem; font-size: 1rem; }
+.btn--primary { background: var(--color-burgundy); color: var(--color-milk); }
+.btn--primary:hover { background: var(--color-wine); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.btn--outline { background: transparent; color: var(--color-burgundy); border-color: var(--color-burgundy); }
+.btn--outline:hover { background: var(--color-burgundy); color: var(--color-milk); }
+.btn--ghost { background: transparent; color: var(--color-graphite); }
+.btn--ghost:hover { color: var(--color-burgundy); }
+.btn--inverse { background: var(--color-milk); color: var(--color-burgundy); }
+.btn--inverse:hover { background: var(--color-white); transform: translateY(-2px); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }

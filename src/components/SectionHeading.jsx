@@ -1,0 +1,11 @@
+import './SectionHeading.css';
+export default function SectionHeading({ eyebrow, title, subtitle, align = 'left', light = false, action }) {
+  return (
+    <div className={`section-heading section-heading--${align} ${light ? 'section-heading--light' : ''}`}>
+      {eyebrow && <span className="section-heading__eyebrow">{eyebrow}</span>}
+      <h2 className="section-heading__title">{title}</h2>
+      {subtitle && <p className="section-heading__subtitle">{subtitle}</p>}
+      {action && <div className="section-heading__action">{action}</div>}
+    </div>
+  );
+}

@@ -1,0 +1,57 @@
+.about-page { padding-top: 120px; }
+.about-hero { padding: var(--space-xl) 0 var(--space-2xl); }
+.about-philosophy { padding: var(--space-2xl) 0; }
+.about-philosophy__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: center; }
+.about-philosophy__visual { position: relative; }
+.about-philosophy__img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); }
+.about-philosophy__quote { position: absolute; bottom: -30px; right: -30px; padding: 1.5rem 2rem; background: var(--color-burgundy); color: var(--color-milk); border-radius: var(--radius-lg); max-width: 280px; box-shadow: var(--shadow-lg); }
+.about-philosophy__quote svg { margin-bottom: 0.75rem; }
+.about-philosophy__quote p { font-family: var(--font-display); font-style: italic; font-size: 1.1rem; line-height: 1.4; }
+.about-philosophy__title { font-family: var(--font-display); font-size: var(--fs-h1); font-weight: 500; margin-bottom: 1.5rem; color: var(--color-burgundy); }
+.about-philosophy__text p { font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.25rem; opacity: 0.85; }
+.about-mission { padding: var(--space-3xl) 0; }
+.about-mission__content { text-align: center; max-width: 800px; margin: 0 auto; }
+.about-mission__title { font-family: var(--font-display); font-size: var(--fs-h1); font-weight: 500; margin-bottom: 1.5rem; color: var(--color-milk); }
+.about-mission__text { font-family: var(--font-display); font-size: 1.3rem; font-style: italic; line-height: 1.6; opacity: 0.9; margin-bottom: 3rem; }
+.about-mission__stats { display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; }
+.about-mission__stat { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+.about-mission__stat-num { font-family: var(--font-display); font-size: 3.5rem; font-weight: 500; color: var(--color-powder); line-height: 1; }
+.about-mission__stat-label { font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; }
+.about-principles { padding: var(--space-3xl) 0; }
+.about-principles__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--grid-gap); }
+.about-principle { padding: 2rem; background: var(--color-white); border-radius: var(--radius-lg); border: 1px solid rgba(52, 50, 56, 0.08); transition: all var(--duration-normal) var(--ease-smooth); }
+.about-principle:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--color-burgundy); }
+.about-principle__icon { width: 40px; height: 40px; color: var(--color-burgundy); margin-bottom: 1.25rem; }
+.about-principle__title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 500; margin-bottom: 0.75rem; }
+.about-principle__text { font-size: 0.95rem; line-height: 1.6; opacity: 0.8; }
+.about-gallery { padding: var(--space-3xl) 0; }
+.about-gallery__grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; gap: 1rem; }
+.about-gallery__item { border-radius: var(--radius-md); overflow: hidden; background: var(--color-powder); }
+.about-gallery__item img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--duration-slow) var(--ease-smooth); }
+.about-gallery__item:hover img { transform: scale(1.06); }
+.about-gallery__item--wide { grid-column: span 2; grid-row: span 2; }
+.about-future { padding: var(--space-3xl) 0; }
+.about-future__content { text-align: center; max-width: 700px; margin: 0 auto; }
+.about-future__title { font-family: var(--font-display); font-size: var(--fs-h1); font-weight: 500; margin-bottom: 1.5rem; color: var(--color-milk); }
+.about-future__text { font-size: 1.1rem; line-height: 1.7; opacity: 0.9; margin-bottom: 1.25rem; }
+.about-future__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+.about-future__btn { display: inline-flex; align-items: center; gap: 0.6rem; padding: 1rem 2rem; background: var(--color-milk); color: var(--color-burgundy); border-radius: 999px; font-weight: 500; font-size: 0.95rem; transition: all var(--duration-normal) var(--ease-smooth); }
+.about-future__btn:hover { background: var(--color-white); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.about-future__btn--ghost { background: transparent; color: var(--color-milk); border: 1px solid rgba(245, 240, 236, 0.4); }
+.about-future__btn--ghost:hover { background: rgba(245, 240, 236, 0.1); border-color: var(--color-milk); }
+@media (max-width: 1024px) {
+  .about-philosophy__grid { grid-template-columns: 1fr; gap: var(--space-2xl); }
+  .about-philosophy__quote { right: 20px; bottom: -20px; }
+  .about-gallery__grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 180px; }
+}
+@media (max-width: 768px) {
+  .about-mission__stats { gap: 2rem; }
+  .about-mission__stat-num { font-size: 2.5rem; }
+  .about-gallery__grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }
+  .about-gallery__item--wide { grid-column: span 2; grid-row: span 1; }
+  .about-future__actions { flex-direction: column; }
+  .about-future__btn { width: 100%; justify-content: center; }
+}
+@media (max-width: 480px) {
+  .about-philosophy__quote { position: static; margin-top: 1.5rem; max-width: 100%; }
+}
